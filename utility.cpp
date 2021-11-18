@@ -9,13 +9,32 @@
 // You will need to include the function prototype in "utility.h" and
 // then be sure to  #include "utility.h" in the file where you use
 // these functions
-
+#include <cmath>
 bool isOdd(int x) { 
-  return false;  // REPLACE THIS STUB WITH REAL CODE
+  if (fabs(x%2)==1){
+	return true;
+  }
+  else{
+	  return false;
+  }
 }
 bool isEven(int x) { 
-  return false;  // REPLACE THIS STUB WITH REAL CODE
+  if (x%2==0){
+	 return true;
+  }
+  else{
+    return false;  // REPLACE THIS STUB WITH REAL CODE
+  }
 }
 bool isPrime(int x) { 
-  return false;  // REPLACE THIS STUB WITH REAL CODE
+  bool primeStatus = true;
+  if (x<2){
+	  return false;
+  }
+  for (int i = 2; i<(x/2)+1; i++){
+	  if ((x%i)==0){
+		  primeStatus = false;
+	  }
+  }
+  return primeStatus;
 }
